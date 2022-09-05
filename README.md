@@ -1,13 +1,13 @@
 # Laravel-SendCloud
 
-供 Laravel 5.X 使用的 SendCloud 驱动，发送方式完全兼容官方用法，可随时修改配置文件改为其他驱动，而不需要改动业务代码
+供 Laravel 使用的 SendCloud 驱动，发送方式完全兼容官方用法，可随时修改配置文件改为其他驱动，而不需要改动业务代码
 
 > `Laravel 5.5` 以下版本请使用 `1.1.3` 版本，并手动添加 ServiceProvier  到 `config/app.php`
 
 ## 安装
 
 ```
-composer require naux/sendcloud
+composer require digitspark/sendcloud
 ```
 
 ## 配置
@@ -41,7 +41,7 @@ Mail::send('emails.welcome', $data, function ($message) {
 
 ```php
 // 模板变量
-$bind_data = ['url' => 'http://naux.me'];
+$bind_data = ['url' => 'http://digitspark.com'];
 $template = new SendCloudTemplate('模板名', $bind_data);
 
 Mail::raw($template, function ($message) {

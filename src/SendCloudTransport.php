@@ -1,6 +1,6 @@
 <?php
 
-namespace Naux\Mail;
+namespace DigitSpark\Mail;
 
 use GuzzleHttp\Client;
 use Illuminate\Mail\Transport\Transport;
