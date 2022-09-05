@@ -16,8 +16,8 @@ use Swift_Mime_SimpleMessage;
  */
 class SendCloudTransport extends Transport
 {
-    const SEND_HTML_URL     = 'http://sendcloud.sohu.com/webapi/mail.send.json';
-    const SEND_TEMPLATE_URL = 'http://sendcloud.sohu.com/webapi/mail.send_template.json';
+    const SEND_HTML_URL     = 'http://api.sendcloud.net/webapi/mail.send.json';
+    const SEND_TEMPLATE_URL = 'http://api.sendcloud.net/webapi/mail.send_template.json';
 
     protected $query = [];
 

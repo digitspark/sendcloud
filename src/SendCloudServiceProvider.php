@@ -7,7 +7,7 @@
  */
 namespace DigitSpark\Mail;
 
-use Illuminate\Mail\TransportManager;
+use Illuminate\Mail\MailManager;
 use Illuminate\Support\ServiceProvider;
 
 class SendCloudServiceProvider extends ServiceProvider
@@ -21,8 +21,8 @@ class SendCloudServiceProvider extends ServiceProvider
             dirname(__DIR__).'/config/services.php', 'services'
         );
         
-        $this->app->resolving('swift.transport', function (TransportManager $tm) {
-            $tm->extend('sendcloud', function () {
+        $this->app->resolving('mail.manager', function (MailManager $mm) {
+            $mm->extend('sendcloud', function () {
                 $api_user = $this->app->make('config')->get('services.sendcloud.api_user');
                 $api_key = $this->app->make('config')->get('services.sendcloud.api_key');
 
